@@ -51,10 +51,11 @@ function initModal() {
   if (leadForm) {
     leadForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('leadName')?.value || 'Organizer';
-      const city = document.getElementById('leadCity')?.value || 'your city';
+      const name = document.getElementById('leadName')?.value || 'Peserta';
+      const school = document.getElementById('leadCity')?.value || 'Jakarta';
+      const role = document.getElementById('leadRole')?.value || 'Game Maker';
 
-      alert(`🎉 Wonderful, ${name}! Your game jam grant application for ${city} (Nov 14–15, 2026) has been received. We've sent the Haven Starter Kit & Grant info to your email!`);
+      alert(`🎉 Hore, ${name}! Pendaftaranmu untuk Haven Jakarta (14–15 November 2026) sebagai ${role} dari ${school} berhasil terkirim! Informasi panduan peserta & tiket masuk telah dikirimkan ke emailmu.`);
       leadForm.reset();
       closeModal();
     });

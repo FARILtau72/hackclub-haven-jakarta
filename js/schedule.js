@@ -4,26 +4,26 @@
 
 const SCHEDULE_DAYS = {
   day1: {
-    label: 'Day 1 — Nov 14',
+    label: 'Hari 1 — 14 Nov',
     events: [
-      { time: '09:00 AM', text: 'Check-in & Warm Breakfast' },
-      { time: '10:00 AM', text: 'Opening Ceremony & Jam Kickoff' },
-      { time: '10:30 AM', text: 'Team Formation & Game Ideas' },
-      { time: '11:00 AM', text: 'Game Jam Hacking Begins!' },
-      { time: '01:00 PM', text: 'Free Pizza Lunch & Workshop' },
-      { time: '06:00 PM', text: 'Dinner & Bug Squashing' },
-      { time: '08:00 PM', text: 'Mini-Games & Night Demos' }
+      { time: '09:00 WIB', text: 'Check-in, Registrasi & Sarapan Pagi' },
+      { time: '10:00 WIB', text: 'Opening Ceremony & Pengumuman Tema Game' },
+      { time: '10:30 WIB', text: 'Team Matching & Brainstorming Ide' },
+      { time: '11:00 WIB', text: 'Game Jam Hacking Dimulai!' },
+      { time: '13:00 WIB', text: 'Makan Siang Pizza Gratis & Mini Workshop' },
+      { time: '18:00 WIB', text: 'Makan Malam & Sesi Debugging Bareng Mentor' },
+      { time: '20:30 WIB', text: 'Mini Games & Fun Midnight Showcase' }
     ]
   },
   day2: {
-    label: 'Day 2 — Nov 15',
+    label: 'Hari 2 — 15 Nov',
     events: [
-      { time: '09:00 AM', text: 'Morning Bagels & Cocoa' },
-      { time: '10:00 AM', text: 'Playtesting & Sound Polish' },
-      { time: '01:00 PM', text: 'Game Submissions Deadline' },
-      { time: '01:30 PM', text: 'Pizza Feast & Arcade Hall' },
-      { time: '03:00 PM', text: 'Public Game Demos & Voting' },
-      { time: '04:30 PM', text: 'Awards & Swag Ceremony' }
+      { time: '09:00 WIB', text: 'Sarapan Pagi & Sesi Coding Terakhir' },
+      { time: '10:00 WIB', text: 'Playtesting, Polish Sound & Art' },
+      { time: '13:00 WIB', text: 'Batas Akhir Submission Game di Itch.io' },
+      { time: '13:30 WIB', text: 'Makan Siang Pizza & Arcade Party' },
+      { time: '15:00 WIB', text: 'Demo Game Terbuka & Voting Karya Favorit' },
+      { time: '16:30 WIB', text: 'Penyerahan Hadiah, Swag & Closing Ceremony' }
     ]
   }
 };
