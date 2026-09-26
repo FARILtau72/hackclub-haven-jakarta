@@ -1,0 +1,193 @@
+/* ==========================================================================
+   PICNIC SCENE & TESTIMONIAL VIDEO CARDS (Hack Club Haven) - Max < 200 Lines
+   Cards positioned directly ON TOP of the orange checkered picnic blanket
+   ========================================================================== */
+
+.picnic-meadow-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--c-meadow-green);
+  padding: 30px 16px 50px;
+}
+
+.picnic-canvas-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.picnic-base-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Placed directly inside the orange checkered blanket of animalkumpul.png */
+.picnic-blanket-content {
+  position: absolute;
+  top: 26%;
+  left: 9%;
+  right: 9%;
+  bottom: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.blanket-title {
+  font-family: var(--font-bubbly);
+  font-size: clamp(0.72rem, 1.8vw, 1.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(69, 26, 3, 0.8);
+  margin-bottom: 8px;
+  line-height: 1.25;
+  max-width: 90%;
+}
+
+.blanket-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.blanket-video-card {
+  background: #ea580c;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(69, 26, 3, 0.35);
+  padding: 6px;
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s var(--ease-bounce), box-shadow 0.2s ease;
+}
+
+.blanket-video-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(69, 26, 3, 0.45);
+}
+
+.video-preview-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1.5px solid #ffffff;
+  margin-bottom: 4px;
+  background: #78350f;
+}
+
+.video-preview-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blanket-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #ea580c;
+  border: 1.5px solid #78350f;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.blanket-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.video-card-city {
+  font-family: var(--font-bubbly);
+  font-size: clamp(0.72rem, 1.4vw, 0.95rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.video-card-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.58rem, 1vw, 0.76rem);
+  font-weight: 600;
+  color: #fffbeb;
+  line-height: 1.25;
+}
+
+/* Lace Ribbon Divider */
+.lace-divider-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 10px;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.lace-line {
+  flex: 1;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, #ffffff, #ffffff 8px, transparent 8px, transparent 14px);
+  border-radius: 2px;
+}
+
+.lace-flower {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lace-flower-svg {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 2px 4px rgba(69, 26, 3, 0.2));
+}
+
+@media (max-width: 580px) {
+  .picnic-blanket-content {
+    top: 24%;
+    left: 7%;
+    right: 7%;
+    bottom: 24%;
+  }
+  .blanket-cards-grid {
+    gap: 5px;
+  }
+  .blanket-video-card {
+    padding: 4px;
+    border-radius: 8px;
+  }
+  .blanket-play-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+  }
+  .blanket-title {
+    margin-bottom: 4px;
+  }
+}

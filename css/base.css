@@ -1,0 +1,112 @@
+/* ==========================================================================
+   BASE & FOUNDATION STYLES (Hack Club Haven)
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --c-canopy-orange: #ea580c;
+  --c-canopy-gold: #f97316;
+  --c-canopy-amber: #fbbf24;
+  --c-meadow-green: #8cc627;
+  --c-meadow-deep: #77b815;
+  --c-meadow-dark: #538712;
+  --c-path-dirt: #d97706;
+  --c-path-light: #f59e0b;
+  --c-brown-border: #78350f;
+  --c-brown-dark: #451a03;
+  --c-card-cream: #fffbeb;
+  --c-card-yellow: #fef3c7;
+  --c-soil-dark: #321305;
+  --c-soil-border: #1a0802;
+  --c-orange-cta: #ea580c;
+  --c-orange-hover: #f97316;
+  --c-pink-stamp: #f43f5e;
+
+  /* Typography */
+  --font-bubbly: 'DynaPuff', 'Sniglet', cursive;
+  --font-heading: 'Fredoka', cursive, sans-serif;
+  --font-script: 'Mali', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Cozy Borders & Shadows */
+  --border-cozy: 3px solid #78350f;
+  --border-cozy-thick: 4px solid #78350f;
+  --shadow-cozy: 0 4px 0 #78350f;
+  --shadow-cozy-lg: 0 6px 0 #78350f;
+  --radius-cozy: 20px;
+  --radius-pill: 999px;
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.storybook-body {
+  font-family: var(--font-sans);
+  background-color: var(--c-meadow-green);
+  color: var(--c-brown-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-page-layout {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   FALLING AUTUMN LEAVES OVERLAY
+   ========================================================================== */
+.autumn-leaves-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 90;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  top: -40px;
+  font-size: 1.4rem;
+  opacity: 0.8;
+  animation: leafDrift linear infinite;
+  user-select: none;
+}
+
+.l1 { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.l2 { left: 28%; animation-duration: 16s; animation-delay: 2.5s; font-size: 1.8rem; }
+.l3 { left: 52%; animation-duration: 11s; animation-delay: 1.2s; }
+.l4 { left: 76%; animation-duration: 15s; animation-delay: 4s; font-size: 1.6rem; }
+.l5 { left: 90%; animation-duration: 13s; animation-delay: 2s; }
+
+@keyframes leafDrift {
+  0% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; }
+  10% { opacity: 0.85; }
+  90% { opacity: 0.85; }
+  100% { transform: translateY(105vh) rotate(360deg) translateX(50px); opacity: 0; }
+}

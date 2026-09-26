@@ -1,0 +1,152 @@
+/* ==========================================================================
+   CARROT PATCH FAQ ACCORDION STYLES - Max < 200 Lines
+   ========================================================================== */
+
+.carrot-patch-faq-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--c-meadow-green);
+  padding: 50px 16px 70px;
+}
+
+.faq-inner-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Wooden Sign Post */
+.wooden-sign-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sign-board {
+  background: #b45309;
+  border: var(--border-cozy-thick);
+  border-radius: 16px;
+  box-shadow: var(--shadow-cozy-lg);
+  padding: 10px 36px;
+  transform: rotate(-1.5deg);
+}
+
+.faq-sign-text {
+  font-family: var(--font-bubbly);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(69, 26, 3, 0.6);
+  letter-spacing: 2px;
+}
+
+.sign-pole {
+  width: 16px;
+  height: 24px;
+  background: #78350f;
+  border: 2px solid #451a03;
+  border-top: none;
+}
+
+/* 2 Soil Beds Layout */
+.carrot-patch-dual-beds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.furrow-bed-col {
+  background: #3e1b07;
+  border: 4px solid #230e04;
+  border-radius: 24px;
+  padding: 16px 14px 20px;
+  box-shadow: 0 6px 0 #1b0a02, inset 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.carrot-tops-row,
+.planted-carrots-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0;
+  user-select: none;
+  font-size: 1.3rem;
+}
+
+.faq-soil-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-wood-panel {
+  background: #fffbeb;
+  border: 2px solid #78350f;
+  border-radius: 12px;
+  box-shadow: 0 3px 0 #78350f;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-wood-panel.active {
+  background: #fef3c7;
+  box-shadow: 0 4px 0 #ea580c;
+  border-color: #ea580c;
+}
+
+.faq-panel-btn {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-bubbly);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--c-brown-dark);
+  text-align: left;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.faq-arrow {
+  font-size: 0.75rem;
+  color: #ea580c;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-wood-panel.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-panel-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0 14px;
+}
+
+.faq-wood-panel.active .faq-panel-drawer {
+  max-height: 180px;
+  padding: 0 14px 14px;
+}
+
+.faq-panel-drawer p {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #78350f;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .carrot-patch-dual-beds {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

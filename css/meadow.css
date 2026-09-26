@@ -1,0 +1,126 @@
+/* ==========================================================================
+   WINDING MEADOW ROAD VILLAGE STYLES - Max < 200 Lines
+   Full Width Desktop & Seamless Mobile Responsive
+   ========================================================================== */
+
+.meadow-path-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--c-meadow-green);
+  overflow: hidden;
+}
+
+.roadvillage-stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.roadvillage-canvas-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.roadvillage-cards-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.path-card {
+  position: absolute;
+  pointer-events: auto;
+  background: rgba(255, 251, 235, 0.96);
+  border: var(--border-cozy);
+  border-radius: var(--radius-cozy);
+  box-shadow: var(--shadow-cozy);
+  padding: 18px 22px;
+  width: min(440px, 30vw);
+  backdrop-filter: blur(4px);
+  transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s ease;
+  z-index: 5;
+}
+
+.path-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-cozy-lg);
+}
+
+.card-heading {
+  font-family: var(--font-bubbly);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  color: var(--c-brown-dark);
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #78350f;
+  line-height: 1.45;
+}
+
+.thumbnails-trio {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+
+.thumbnails-trio img {
+  width: 31%;
+  height: 66px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--c-brown-border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Desktop Absolute Coordinates on Road Curves */
+.card-pos-1 { top: 7%; left: 8%; }
+.card-pos-2 { top: 19%; right: 8%; }
+.card-pos-3 { top: 43%; left: 8%; }
+
+/* Mobile & Tablet Responsive View */
+@media (max-width: 768px) {
+  .meadow-path-section { padding: 0; }
+  .roadvillage-stage {
+    background: #8cc627 url('../assets/roadvillage.png') no-repeat center top / cover;
+    padding: 40px 16px 120px;
+    min-height: 900px;
+  }
+  .roadvillage-canvas-img { display: none; }
+  .roadvillage-cards-overlay {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+    pointer-events: auto;
+  }
+  .path-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 92% !important;
+    max-width: 400px !important;
+    box-shadow: 0 4px 8px rgba(69, 26, 3, 0.25);
+  }
+  .card-pos-1 { align-self: flex-start; margin-left: 2px; }
+  .card-pos-2 { align-self: flex-end; margin-right: 2px; }
+  .card-pos-3 { align-self: flex-start; margin-left: 4px; }
+}
+
+@media (max-width: 480px) {
+  .roadvillage-stage { padding: 30px 12px 90px; min-height: 800px; }
+  .path-card { width: 96% !important; padding: 14px 16px; }
+  .thumbnails-trio img { height: 52px; }
+}

@@ -1,0 +1,185 @@
+/* ==========================================================================
+   SCHEDULE SECTION STYLES (Nov 14-15, 2026) - Max < 200 Lines
+   ========================================================================== */
+
+.schedule-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--c-meadow-green);
+  padding: 60px 16px 80px;
+}
+
+.schedule-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Cottage Roof on Top of Schedule */
+.schedule-cottage-roof {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.roof-shape {
+  width: 90%;
+  height: 38px;
+  background: #ea580c;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border: var(--border-cozy-thick);
+  border-bottom: none;
+  box-shadow: 0 -4px 10px rgba(69, 26, 3, 0.2);
+}
+
+.roof-chimney {
+  position: absolute;
+  top: -4px;
+  right: 18%;
+  width: 22px;
+  height: 28px;
+  background: #b45309;
+  border: 3px solid #78350f;
+  border-radius: 4px;
+}
+
+/* The Wooden Schedule Frame */
+.schedule-wood-frame {
+  background: #fffbeb;
+  border: var(--border-cozy-thick);
+  border-radius: 24px;
+  box-shadow: var(--shadow-cozy-lg);
+  padding: 28px 24px;
+  position: relative;
+  z-index: 5;
+}
+
+.frame-leaves-left,
+.frame-leaves-right {
+  position: absolute;
+  top: 18px;
+  font-size: 1.6rem;
+  user-select: none;
+}
+.frame-leaves-left { left: 16px; }
+.frame-leaves-right { right: 16px; }
+
+.schedule-title {
+  font-family: var(--font-bubbly);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--c-brown-dark);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Tabs: Day 1 (Nov 14) and Day 2 (Nov 15) */
+.schedule-tab-header {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0 24px;
+}
+
+.day-tab-pill {
+  font-family: var(--font-bubbly);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 2px solid #78350f;
+  background: #fef3c7;
+  color: var(--c-brown-dark);
+  cursor: pointer;
+  transition: all 0.2s var(--ease-bounce);
+}
+
+.day-tab-pill:hover {
+  transform: translateY(-2px);
+  background: #fde68a;
+}
+
+.day-tab-pill.active {
+  background: var(--c-orange-cta);
+  color: #ffffff;
+  border-color: #78350f;
+  box-shadow: 0 3px 0 #78350f;
+}
+
+/* Schedule Timeline Board */
+.schedule-board {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 12px;
+  background: rgba(254, 243, 199, 0.5);
+  border-radius: 12px;
+  border: 1px solid #fde68a;
+}
+
+.sched-time {
+  font-family: var(--font-bubbly);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ea580c;
+  white-space: nowrap;
+  min-width: 82px;
+}
+
+.sched-line {
+  width: 2px;
+  height: 22px;
+  background: #d97706;
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+.sched-event {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--c-brown-dark);
+}
+
+.schedule-amber-filler {
+  height: 16px;
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.3) 100%);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 540px) {
+  .schedule-wood-frame {
+    padding: 20px 14px;
+  }
+  .schedule-tab-header {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .day-tab-pill {
+    font-size: 0.88rem;
+    padding: 6px 12px;
+  }
+  .schedule-row {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .sched-time {
+    font-size: 0.85rem;
+    min-width: 72px;
+  }
+  .sched-event {
+    font-size: 0.88rem;
+  }
+}
