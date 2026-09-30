@@ -1,3 +1,8 @@
+/* ==========================================================================
+   HACK CLUB HAVEN — MASTER STYLESHEET MANIFEST (< 200 Lines)
+   Modular CSS Architecture
+   ========================================================================== */
+
 @import url('css/base.css');
 @import url('css/nav.css');
 @import url('css/hero.css');

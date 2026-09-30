@@ -46,11 +46,5 @@ function initFaq() {
   });
 }
 
-// Auto-run or export
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initFaq);
-} else {
-  initFaq();
-}
-
+// Export module initializer
 window.initFaq = initFaq;
