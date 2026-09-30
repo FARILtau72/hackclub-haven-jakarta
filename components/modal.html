@@ -1,0 +1,34 @@
+  <div class="modal-backdrop" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-story-card">
+      <button class="modal-close-btn" id="closeSignupModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header-block">
+        <span class="modal-kicker-tag">🍂 HAVEN JAKARTA — NOVEMBER 14–15, 2026</span>
+        <h3 class="modal-title" id="modalTitle">Register for Haven Jakarta!</h3>
+        <p class="modal-intro">Claim your spot for the game jam on November 14–15, 2026 in Jakarta. 100% Free with meals and swag provided!</p>
+      </div>
+      <form class="modal-form-fields" id="leadJamForm">
+        <div class="field-item">
+          <label for="leadName">Full Name</label>
+          <input type="text" id="leadName" placeholder="e.g. Alex Johnson" required />
+        </div>
+        <div class="field-item">
+          <label for="leadEmail">Email Address</label>
+          <input type="email" id="leadEmail" placeholder="alex@example.com" required />
+        </div>
+        <div class="field-item">
+          <label for="leadCity">School & City</label>
+          <input type="text" id="leadCity" placeholder="e.g. Jakarta International School" required />
+        </div>
+        <div class="field-item">
+          <label for="leadRole">Your Preferred Role</label>
+          <select id="leadRole" required>
+            <option value="programmer">Programmer / Coder</option>
+            <option value="artist">Pixel Artist / Illustrator</option>
+            <option value="music">Music & Sound Designer</option>
+            <option value="beginner">Complete Beginner (Learning from Scratch)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit-modal">Submit Registration 🚀</button>
+      </form>
+    </div>
+  </div>

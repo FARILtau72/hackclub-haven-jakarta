@@ -17,37 +17,91 @@
   <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 <body class="storybook-body">
-  <div class="autumn-leaves-overlay" aria-hidden="true"><span class="leaf l1">🍂</span><span class="leaf l2">🍁</span><span class="leaf l3">🍂</span><span class="leaf l4">🍁</span><span class="leaf l5">🍃</span></div>
+  <!-- Shared SVG Symbols Manifest (Ultra-crisp & zero markup redundancy) -->
+  <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-hcb" viewBox="0 0 48 48">
+      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <div class="autumn-leaves-overlay" aria-hidden="true">
+    <span class="leaf l1">🍂</span><span class="leaf l2">🍁</span><span class="leaf l3">🍂</span><span class="leaf l4">🍁</span><span class="leaf l5">🍃</span>
+  </div>
+
   <div class="full-page-layout">
-    <header class="top-nav-bar">
+<header class="top-nav-bar">
       <div class="nav-container">
         <div class="nav-spacer-left" aria-hidden="true"></div>
-        <a href="#hero" class="nav-brand-logo-center" aria-label="Hack Club Haven Jakarta"><img src="assets/logo.png" alt="Haven Jakarta" class="brand-logo-img white-tint" /></a>
-        <nav class="nav-right-menu" aria-label="Main Navigation"><a href="#about" class="nav-item">Story</a><a href="#supporters" class="nav-item">Supporters</a><a href="#faq" class="nav-item">FAQ</a></nav>
-        <button class="mobile-burger-btn" id="mobileBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <a href="#hero" class="nav-brand-logo-center" aria-label="Hack Club Haven Jakarta">
+          <img src="assets/logo.png" alt="Haven Jakarta" class="brand-logo-img white-tint" />
+        </a>
+        <nav class="nav-right-menu" aria-label="Main Navigation">
+          <a href="#about" class="nav-item">Story</a>
+          <a href="#supporters" class="nav-item">Supporters</a>
+          <a href="#faq" class="nav-item">FAQ</a>
+        </nav>
+        <button class="mobile-burger-btn" id="mobileBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <nav class="mobile-nav-drawer" id="mobileDrawer"><a href="#about" class="mob-link">Story</a><a href="#how-it-works" class="mob-link">How it Works</a><a href="#past-jams" class="mob-link">Past Events</a><a href="#supporters" class="mob-link">Supporters</a><a href="#faq" class="mob-link">FAQ</a><button class="btn-drawer-signup" id="drawerSignupBtn">Register Now! 🚀</button></nav>
+      <nav class="mobile-nav-drawer" id="mobileDrawer">
+        <a href="#about" class="mob-link">Story</a>
+        <a href="#how-it-works" class="mob-link">How it Works</a>
+        <a href="#past-jams" class="mob-link">Past Events</a>
+        <a href="#supporters" class="mob-link">Supporters</a>
+        <a href="#faq" class="mob-link">FAQ</a>
+        <button class="btn-drawer-signup" id="drawerSignupBtn">Register Now! 🚀</button>
+      </nav>
     </header>
 
     <main>
-      <section id="hero" class="hero-section">
+<section id="hero" class="hero-section">
         <div class="hero-content-wrap">
           <h1 class="hero-title">Make your first video game<br>at Haven Jakarta!</h1>
           <p class="hero-desc">The biggest weekend game jam for middle and high school students in Jakarta on <strong>November 14–15, 2026</strong>. 100% Free, food and swag included!</p>
           <form class="hero-email-pill" id="heroEmailForm">
             <input type="email" placeholder="enter your email to register" required aria-label="Email" class="email-input-field" />
-            <button type="submit" class="email-submit-arrow" aria-label="Register"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+            <button type="submit" class="email-submit-arrow" aria-label="Register">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
           </form>
           <div class="hero-characters-row">
-            <div class="hedgehog-hero-wrapper" aria-hidden="true"><img src="assets/animalcuteHQ.png" alt="Haven Mascot" class="hedgehog-hero-img" /></div>
-            <a href="#about" class="learn-more-indicator"><span class="learn-text">learn more</span><span class="down-triangle">▼</span></a>
-            <div class="hero-overview-widget"><div class="widget-top-bar"><span class="widget-title">overview</span><div class="widget-dots"><span></span><span></span></div></div><div class="widget-screen"><button class="pulse-play-icon" aria-label="Video Overview"><svg viewBox="0 0 24 24" fill="#ffffff" width="16" height="16"><polygon points="8,5 19,12 8,19" /></svg></button></div></div>
+            <div class="hedgehog-hero-wrapper" aria-hidden="true">
+              <img src="assets/animalcuteHQ.png" alt="Haven Mascot" class="hedgehog-hero-img" />
+            </div>
+            <a href="#about" class="learn-more-indicator">
+              <span class="learn-text">learn more</span>
+              <span class="down-triangle">▼</span>
+            </a>
+            <div class="hero-overview-widget">
+              <div class="widget-top-bar">
+                <span class="widget-title">overview</span>
+                <div class="widget-dots"><span></span><span></span></div>
+              </div>
+              <div class="widget-screen">
+                <button class="pulse-play-icon" aria-label="Video Overview">
+                  <svg viewBox="0 0 24 24" fill="#ffffff" width="16" height="16">
+                    <polygon points="8,5 19,12 8,19" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero-bottom-divider" aria-hidden="true"></div>
       </section>
 
-      <section id="about" class="meadow-path-section">
+<section id="about" class="meadow-path-section">
         <div class="roadvillage-stage">
           <img src="assets/roadvillage_exact.png" alt="Haven Adventure Road & Village" class="roadvillage-canvas-img" />
           
@@ -127,11 +181,7 @@
         </div>
       </section>
 
-      <!-- =========================================================================
-           4-STEP ORGANIZER GUIDE (Here is how you can organize a game jam this November!)
-           Matches media_1790721001125.png 100%
-           ========================================================================= -->
-      <section id="how-it-works" class="organizer-steps-section">
+<section id="how-it-works" class="organizer-steps-section">
         <div class="steps-container">
           <h2 class="steps-main-heading">Here is how you can organize a game jam this November!</h2>
           <div class="steps-cards-row">
@@ -182,11 +232,7 @@
         </div>
       </section>
 
-      <!-- =========================================================================
-           PICNIC MEADOW & PAST EVENTS (Scrapyard, Daydream, Campfire)
-           Matches media_1790721001125.png 100%
-           ========================================================================= -->
-      <section id="past-jams" class="picnic-meadow-section">
+<section id="past-jams" class="picnic-meadow-section">
         <div class="picnic-canvas-wrap">
           <img src="assets/animalkumpul.png" alt="Picnic with cute animals" class="picnic-base-img" />
           
@@ -249,11 +295,7 @@
         </div>
       </section>
 
-      <!-- =========================================================================
-           SUPPORTERS SECTION (PURE VECTOR HTML & CSS)
-           Matches media_1790728030812.png 100%
-           ========================================================================= -->
-      <section id="supporters" class="supporters-exact-section">
+<section id="supporters" class="supporters-exact-section">
         <div id="schedule" style="position:absolute;top:0;"></div>
         
         <!-- Top Lace Ribbon Divider -->
@@ -270,78 +312,12 @@
           <!-- Tier 1 Dirt Terrace -->
           <div class="supporters-terrace">
             <h2 class="supporters-exact-title">Supporters</h2>
-
             <div class="supporters-stamps-grid">
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
             </div>
           </div>
 
@@ -355,76 +331,11 @@
           <!-- Tier 2 Dirt Terrace -->
           <div class="supporters-terrace">
             <div class="supporters-stamps-grid">
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
             </div>
           </div>
 
@@ -438,86 +349,17 @@
           <!-- Tier 3 Dirt Terrace -->
           <div class="supporters-terrace">
             <div class="supporters-stamps-grid">
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
-              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)">
-                <div class="hcb-white-card">
-                  <div class="hcb-pink-badge">
-                    <svg class="hcb-bank-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 21L24 11L36 21" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="17" y1="24" x2="17" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="24" y1="24" x2="24" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="31" y1="24" x2="31" y2="33" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                      <line x1="11" y1="37" x2="37" y2="37" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <span class="hcb-stamp-text">HCB</span>
-              </a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
+              <a href="https://hcb.hackclub.com" target="_blank" rel="noopener noreferrer" class="hcb-stamp-unit" title="Hack Club Bank (HCB)"><div class="hcb-white-card"><div class="hcb-pink-badge"><svg class="hcb-bank-svg" viewBox="0 0 48 48"><use href="#icon-hcb"/></svg></div></div><span class="hcb-stamp-text">HCB</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =========================================================================
-           CARROT PATCH FAQ ACCORDION SECTION (100% PURE VECTOR HTML & CSS)
-           Matches media_1790732202517.png with Real SVG Carrots & Interactive Accordion
-           ========================================================================= -->
-      <section id="faq" class="faq-exact-section">
+<section id="faq" class="faq-exact-section">
         <div class="faq-content-wrap">
           <!-- Wooden Sign Post "FAQ" -->
           <div class="faq-wooden-sign">
@@ -539,9 +381,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Am I eligible?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>If you're in high school or middle school (18 or younger), you are eligible! Beginners, artists, writers, and seasoned coders are all welcome.</p>
@@ -556,9 +396,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Is this free?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>100% Free! Meals, snacks, stickers, custom swag, workshops, and prizes are all fully covered thanks to our sponsors.</p>
@@ -573,12 +411,10 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">But I've never coded before!</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
-                  <p>Don't worry at all! Haven is built for beginners. We run fun workshops and have friendly mentors ready to help you build your very first game from scratch.</p>
+                  <p>Zero prior experience needed! We run beginner-friendly workshops and have patient teen mentors on-site to guide you every step of the way.</p>
                 </div>
               </div>
 
@@ -590,9 +426,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">What if my parents are concerned?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Haven events are fully chaperoned by adult supervisors and experienced student leaders. We enforce a strict Code of Conduct and maintain emergency contacts throughout the event.</p>
@@ -607,9 +441,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">I still have questions!</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Join the global Hack Club Slack at <a href="https://hackclub.com/slack" target="_blank" rel="noopener noreferrer" style="color:#c2410c;font-weight:700;text-decoration:underline;">hackclub.com/slack</a> and chat with us in the #haven channel, or send us a message anytime!</p>
@@ -627,9 +459,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Can I organize a Haven?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Yes! Any teenager anywhere in the world can organize a Haven game jam. Hack Club provides grant funding, custom swag, hardware kits, and 1-on-1 mentorship.</p>
@@ -644,9 +474,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Why should I organize a Haven?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>It's an unforgettable adventure! You'll build real leadership experience, unite your local tech community, and put your city on the global game dev map.</p>
@@ -661,9 +489,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">What are the steps to organizing?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Follow our 4-step roadmap: assemble your team, find a venue, pitch to sponsors via HCB fiscal sponsorship, and buy supplies for workshops!</p>
@@ -678,9 +504,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Do we get volunteer hours?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Yes! Organizing or volunteering to mentor at a Haven game jam qualifies for certified community service / volunteer hours.</p>
@@ -695,9 +519,7 @@
                 </div>
                 <button class="faq-pill-btn" aria-expanded="false">
                   <span class="faq-pill-title">Can I join an organizing team?</span>
-                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                  </svg>
+                  <svg class="faq-chevron-arrow" viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron"/></svg>
                 </button>
                 <div class="faq-drawer-panel">
                   <p>Absolutely! Connect with organizers on Hack Club Slack or form a Haven organizing club at your school to join the crew.</p>
@@ -708,14 +530,25 @@
         </div>
       </section>
 
-      <section class="giant-cta-section"><div class="cta-button-center"><button class="btn-giant-orange-pill" id="openMainModal">Register Now!</button></div></section>
+<section class="giant-cta-section">
+        <div class="cta-button-center">
+          <button class="btn-giant-orange-pill" id="openMainModal">Register Now!</button>
+        </div>
+      </section>
     </main>
 
-    <footer class="storybook-footer">
+<footer class="storybook-footer">
       <div class="footer-layout">
         <div class="footer-left-col">
-          <a href="#hero" class="footer-logo-link"><img src="assets/logo.png" alt="Haven Jakarta Logo" class="footer-logo-img white-tint" /></a>
-          <ul class="footer-links-vertical"><li><a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">Hack Club</a></li><li><a href="https://hackclub.com/slack" target="_blank" rel="noopener noreferrer">Community Slack</a></li><li><a href="https://hackclub.com/clubs" target="_blank" rel="noopener noreferrer">Clubs</a></li><li><a href="https://hackathons.hackclub.com" target="_blank" rel="noopener noreferrer">Hackathons</a></li></ul>
+          <a href="#hero" class="footer-logo-link">
+            <img src="assets/logo.png" alt="Haven Jakarta Logo" class="footer-logo-img white-tint" />
+          </a>
+          <ul class="footer-links-vertical">
+            <li><a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">Hack Club</a></li>
+            <li><a href="https://hackclub.com/slack" target="_blank" rel="noopener noreferrer">Community Slack</a></li>
+            <li><a href="https://hackclub.com/clubs" target="_blank" rel="noopener noreferrer">Clubs</a></li>
+            <li><a href="https://hackathons.hackclub.com" target="_blank" rel="noopener noreferrer">Hackathons</a></li>
+          </ul>
         </div>
         <div class="footer-right-col">
           <p class="footer-p">Hack Club Haven Jakarta is a 501(c)(3) non-profit game jam organized by teenagers, for teenagers. Taking place on November 14–15, 2026 in Jakarta.</p>
@@ -723,11 +556,13 @@
           <p class="footer-tagline">Crafted with love, hot chocolate & autumn leaves 🍂</p>
         </div>
       </div>
-      <div class="footer-grass-trim" aria-hidden="true"><img src="assets/plang.png" alt="Haven Wooden Sign" class="footer-plang-img" /></div>
+      <div class="footer-grass-trim" aria-hidden="true">
+        <img src="assets/plang.png" alt="Haven Wooden Sign" class="footer-plang-img" />
+      </div>
     </footer>
   </div>
 
-  <div class="modal-backdrop" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+<div class="modal-backdrop" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
     <div class="modal-story-card">
       <button class="modal-close-btn" id="closeSignupModal" aria-label="Close modal">&times;</button>
       <div class="modal-header-block">
@@ -736,14 +571,37 @@
         <p class="modal-intro">Claim your spot for the game jam on November 14–15, 2026 in Jakarta. 100% Free with meals and swag provided!</p>
       </div>
       <form class="modal-form-fields" id="leadJamForm">
-        <div class="field-item"><label for="leadName">Full Name</label><input type="text" id="leadName" placeholder="e.g. Alex Johnson" required /></div>
-        <div class="field-item"><label for="leadEmail">Email Address</label><input type="email" id="leadEmail" placeholder="alex@example.com" required /></div>
-        <div class="field-item"><label for="leadCity">School & City</label><input type="text" id="leadCity" placeholder="e.g. Jakarta International School" required /></div>
-        <div class="field-item"><label for="leadRole">Your Preferred Role</label><select id="leadRole" required><option value="programmer">Programmer / Coder</option><option value="artist">Pixel Artist / Illustrator</option><option value="music">Music & Sound Designer</option><option value="beginner">Complete Beginner (Learning from Scratch)</option></select></div>
+        <div class="field-item">
+          <label for="leadName">Full Name</label>
+          <input type="text" id="leadName" placeholder="e.g. Alex Johnson" required />
+        </div>
+        <div class="field-item">
+          <label for="leadEmail">Email Address</label>
+          <input type="email" id="leadEmail" placeholder="alex@example.com" required />
+        </div>
+        <div class="field-item">
+          <label for="leadCity">School & City</label>
+          <input type="text" id="leadCity" placeholder="e.g. Jakarta International School" required />
+        </div>
+        <div class="field-item">
+          <label for="leadRole">Your Preferred Role</label>
+          <select id="leadRole" required>
+            <option value="programmer">Programmer / Coder</option>
+            <option value="artist">Pixel Artist / Illustrator</option>
+            <option value="music">Music & Sound Designer</option>
+            <option value="beginner">Complete Beginner (Learning from Scratch)</option>
+          </select>
+        </div>
         <button type="submit" class="btn-submit-modal">Submit Registration 🚀</button>
       </form>
     </div>
   </div>
-  <script src="js/nav.js"></script><script src="js/schedule.js"></script><script src="js/faq.js"></script><script src="js/modal.js"></script><script src="js/main.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
