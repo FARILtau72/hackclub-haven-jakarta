@@ -1,5 +1,5 @@
 // ==========================================================================
-// MAIN BOOTSTRAP SCRIPT (Max < 200 Lines)
+// MAIN BOOTSTRAP SCRIPT 
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,5 +1,5 @@
 // ==========================================================================
-// CARROT PATCH FAQ ACCORDION LOGIC (Max < 200 Lines)
+// CARROT PATCH FAQ ACCORDION LOGIC 
 // ==========================================================================
 
 function initFaq() {

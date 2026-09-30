@@ -1,5 +1,5 @@
 // ==========================================================================
-// SCHEDULE DATA & INTERACTIVE TAB SWITCHER (Nov 14-15, 2026) - Max < 200 Lines
+// SCHEDULE DATA & INTERACTIVE TAB SWITCHER
 // ==========================================================================
 
 const SCHEDULE_DAYS = {
