@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     heroForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = heroForm.querySelector('input[type="email"]')?.value || '';
-      alert(`🍂 Terima kasih sudah mendaftar (${email})! Kami akan segera kirimkan panduan lengkap Haven Jakarta (14–15 November 2026).`);
+      alert(`🍂 Thank you for registering (${email})! We will send you the complete Haven Jakarta handbook shortly (November 14–15, 2026).`);
       heroForm.reset();
     });
   }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const playBtns = document.querySelectorAll('.pulse-play-icon, .blanket-play-btn');
   playBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      alert('🎬 Memutar video cuplikan keseruan game jam Hack Club Haven!');
+      alert('🎬 Playing recap video highlighting the excitement of Hack Club Haven!');
     });
   });
 });

@@ -51,11 +51,11 @@ function initModal() {
   if (leadForm) {
     leadForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('leadName')?.value || 'Peserta';
+      const name = document.getElementById('leadName')?.value || 'Hacker';
       const school = document.getElementById('leadCity')?.value || 'Jakarta';
       const role = document.getElementById('leadRole')?.value || 'Game Maker';
 
-      alert(`🎉 Hore, ${name}! Pendaftaranmu untuk Haven Jakarta (14–15 November 2026) sebagai ${role} dari ${school} berhasil terkirim! Informasi panduan peserta & tiket masuk telah dikirimkan ke emailmu.`);
+      alert(`🎉 Hooray, ${name}! Your registration for Haven Jakarta (November 14–15, 2026) as ${role} from ${school} has been submitted! We have sent the event handbook and ticket details to your email.`);
       leadForm.reset();
       closeModal();
     });

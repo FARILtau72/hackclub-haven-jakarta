@@ -4,26 +4,26 @@
 
 const SCHEDULE_DAYS = {
   day1: {
-    label: 'Hari 1 — 14 Nov',
+    label: 'Day 1 — Nov 14',
     events: [
-      { time: '09:00 WIB', text: 'Check-in, Registrasi & Sarapan Pagi' },
-      { time: '10:00 WIB', text: 'Opening Ceremony & Pengumuman Tema Game' },
-      { time: '10:30 WIB', text: 'Team Matching & Brainstorming Ide' },
-      { time: '11:00 WIB', text: 'Game Jam Hacking Dimulai!' },
-      { time: '13:00 WIB', text: 'Makan Siang Pizza Gratis & Mini Workshop' },
-      { time: '18:00 WIB', text: 'Makan Malam & Sesi Debugging Bareng Mentor' },
-      { time: '20:30 WIB', text: 'Mini Games & Fun Midnight Showcase' }
+      { time: '09:00 AM', text: 'Check-in, Registration & Breakfast' },
+      { time: '10:00 AM', text: 'Opening Ceremony & Theme Reveal' },
+      { time: '10:30 AM', text: 'Team Matching & Brainstorming' },
+      { time: '11:00 AM', text: 'Game Jam Hacking Begins!' },
+      { time: '01:00 PM', text: 'Free Pizza Lunch & Mini Workshop' },
+      { time: '06:00 PM', text: 'Dinner & Mentor Debugging Session' },
+      { time: '08:30 PM', text: 'Mini Games & Fun Midnight Showcase' }
     ]
   },
   day2: {
-    label: 'Hari 2 — 15 Nov',
+    label: 'Day 2 — Nov 15',
     events: [
-      { time: '09:00 WIB', text: 'Sarapan Pagi & Sesi Coding Terakhir' },
-      { time: '10:00 WIB', text: 'Playtesting, Polish Sound & Art' },
-      { time: '13:00 WIB', text: 'Batas Akhir Submission Game di Itch.io' },
-      { time: '13:30 WIB', text: 'Makan Siang Pizza & Arcade Party' },
-      { time: '15:00 WIB', text: 'Demo Game Terbuka & Voting Karya Favorit' },
-      { time: '16:30 WIB', text: 'Penyerahan Hadiah, Swag & Closing Ceremony' }
+      { time: '09:00 AM', text: 'Breakfast & Final Coding Sprint' },
+      { time: '10:00 AM', text: 'Playtesting, Sound & Art Polish' },
+      { time: '01:00 PM', text: 'Game Submission Deadline on Itch.io' },
+      { time: '01:30 PM', text: 'Pizza Lunch & Arcade Party' },
+      { time: '03:00 PM', text: 'Open Game Demos & Community Voting' },
+      { time: '04:30 PM', text: 'Awards, Swag Distribution & Closing Ceremony' }
     ]
   }
 };
