@@ -1,12 +1,13 @@
 /* ==========================================================================
-   WINDING MEADOW ROAD VILLAGE STYLES - Max < 200 Lines
-   Full Width Desktop & Seamless Mobile Responsive
+   WINDING MEADOW ROAD VILLAGE STYLES - Exact Mockup Clone (< 200 Lines)
+   Matches media_1790720184524.png 100% (What is a game jam? + 3 Cards)
    ========================================================================== */
 
 .meadow-path-section {
   position: relative;
   width: 100%;
-  background-color: var(--c-meadow-green);
+  background-color: #b8c220;
+  margin-bottom: -1px;
   overflow: hidden;
 }
 
@@ -30,97 +31,137 @@
   pointer-events: none;
 }
 
-.path-card {
+/* 1. Top-Left Intro Cloud */
+.gamejam-intro-cloud {
+  position: absolute;
+  top: 3.1%;
+  left: 11.5%;
+  width: 38%;
+  pointer-events: auto;
+  color: #ffffff;
+  padding: 6px 12px;
+  z-index: 4;
+}
+
+.gamejam-intro-title {
+  font-family: var(--font-bubbly);
+  font-size: clamp(1.05rem, 2.3vw, 1.85rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.gamejam-intro-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.7rem, 1.35vw, 1.05rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* 2. Golden Wireframe Card Boxes */
+.card-wireframe {
   position: absolute;
   pointer-events: auto;
-  background: rgba(255, 251, 235, 0.96);
-  border: var(--border-cozy);
-  border-radius: var(--radius-cozy);
-  box-shadow: var(--shadow-cozy);
-  padding: 18px 22px;
-  width: min(440px, 30vw);
-  backdrop-filter: blur(4px);
   transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s ease;
   z-index: 5;
 }
 
-.path-card:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-cozy-lg);
+.card-wireframe::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1.5px solid rgba(239, 170, 72, 0.85);
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.card-wireframe:hover { transform: translateY(-4px) scale(1.015); }
+
+.path-card-inner {
+  position: relative;
+  background: #fffdf5;
+  border: 2.2px solid #efaa48;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.12);
+  padding: clamp(8px, 1.4vw, 14px) clamp(10px, 1.6vw, 18px);
+  text-align: center;
 }
 
 .card-heading {
   font-family: var(--font-bubbly);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: clamp(0.95rem, 1.7vw, 1.45rem);
   font-weight: 700;
-  color: var(--c-brown-dark);
-  margin-bottom: 8px;
-}
-
-.card-text {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #78350f;
-  line-height: 1.45;
+  color: #e86d26;
+  margin-bottom: clamp(6px, 1vw, 10px);
+  line-height: 1.2;
 }
 
 .thumbnails-trio {
   display: flex;
-  gap: 8px;
-  margin: 10px 0;
-  justify-content: space-between;
+  gap: clamp(4px, 0.8vw, 10px);
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: clamp(6px, 1vw, 10px);
 }
 
-.thumbnails-trio img {
-  width: 31%;
-  height: 66px;
+.thumb-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.thumb-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 44 / 34;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid var(--c-brown-border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  border: 1.5px solid #d97706;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
 }
 
-/* Desktop Absolute Coordinates on Road Curves */
-.card-pos-1 { top: 7%; left: 8%; }
-.card-pos-2 { top: 19%; right: 8%; }
-.card-pos-3 { top: 43%; left: 8%; }
+.thumb-img:hover { transform: scale(1.05); }
+.friend-thumb .thumb-img, .food-thumb .thumb-img { aspect-ratio: 48 / 38; }
+
+.thumb-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: clamp(0.52rem, 0.85vw, 0.72rem);
+  font-weight: 700;
+  color: #ea580c;
+  line-height: 1.15;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.card-caption {
+  font-family: var(--font-script);
+  font-size: clamp(0.65rem, 1.1vw, 0.9rem);
+  font-weight: 600;
+  color: #ea580c;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Exact Mockup Percentages */
+.card-pos-1 { top: 17.8%; left: 3.5%; width: 34.8%; }
+.card-pos-2 { top: 29.1%; left: 40.8%; width: 48.6%; }
+.card-pos-3 { top: 46.5%; left: 9.4%; width: 43.4%; }
 
 /* Mobile & Tablet Responsive View */
 @media (max-width: 768px) {
   .meadow-path-section { padding: 0; }
-  .roadvillage-stage {
-    background: #8cc627 url('../assets/roadvillage.png') no-repeat center top / cover;
-    padding: 40px 16px 120px;
-    min-height: 900px;
-  }
+  .roadvillage-stage { background: #b8c220 url('../assets/roadvillage_exact.png') no-repeat center top / cover; padding: 30px 14px 80px; min-height: 850px; }
   .roadvillage-canvas-img { display: none; }
-  .roadvillage-cards-overlay {
-    position: relative;
-    inset: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    max-width: 480px;
-    margin: 0 auto;
-    pointer-events: auto;
-  }
-  .path-card {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: 92% !important;
-    max-width: 400px !important;
-    box-shadow: 0 4px 8px rgba(69, 26, 3, 0.25);
-  }
-  .card-pos-1 { align-self: flex-start; margin-left: 2px; }
-  .card-pos-2 { align-self: flex-end; margin-right: 2px; }
-  .card-pos-3 { align-self: flex-start; margin-left: 4px; }
-}
-
-@media (max-width: 480px) {
-  .roadvillage-stage { padding: 30px 12px 90px; min-height: 800px; }
-  .path-card { width: 96% !important; padding: 14px 16px; }
-  .thumbnails-trio img { height: 52px; }
+  .roadvillage-cards-overlay { position: relative; inset: auto; display: flex; flex-direction: column; gap: 22px; max-width: 460px; margin: 0 auto; pointer-events: auto; }
+  .gamejam-intro-cloud { position: relative !important; top: auto !important; left: auto !important; width: 100% !important; text-align: center; margin-bottom: 10px; }
+  .card-wireframe { position: relative !important; top: auto !important; left: auto !important; width: 100% !important; }
 }

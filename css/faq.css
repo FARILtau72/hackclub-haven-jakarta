@@ -1,152 +1,197 @@
 /* ==========================================================================
-   CARROT PATCH FAQ ACCORDION STYLES - Max < 200 Lines
+   CARROT PATCH FAQ ACCORDION SECTION (PURE HTML & CSS) - Max < 200 Lines
+   Matches media_1790732202517.png with 100% Vector HTML Components
    ========================================================================== */
 
-.carrot-patch-faq-section {
+.faq-exact-section {
   position: relative;
   width: 100%;
   background-color: var(--c-meadow-green);
-  padding: 50px 16px 70px;
+  padding: 40px 16px 90px;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 
-.faq-inner-container {
+.faq-content-wrap {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Wooden Sign Post */
-.wooden-sign-post {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
 }
 
-.sign-board {
-  background: #b45309;
-  border: var(--border-cozy-thick);
-  border-radius: 16px;
-  box-shadow: var(--shadow-cozy-lg);
-  padding: 10px 36px;
-  transform: rotate(-1.5deg);
-}
-
-.faq-sign-text {
-  font-family: var(--font-bubbly);
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(69, 26, 3, 0.6);
-  letter-spacing: 2px;
-}
-
-.sign-pole {
-  width: 16px;
-  height: 24px;
-  background: #78350f;
-  border: 2px solid #451a03;
-  border-top: none;
-}
-
-/* 2 Soil Beds Layout */
-.carrot-patch-dual-beds {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.furrow-bed-col {
-  background: #3e1b07;
-  border: 4px solid #230e04;
-  border-radius: 24px;
-  padding: 16px 14px 20px;
-  box-shadow: 0 6px 0 #1b0a02, inset 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.carrot-tops-row,
-.planted-carrots-row {
-  display: flex;
-  justify-content: space-around;
-  padding: 6px 0;
-  user-select: none;
-  font-size: 1.3rem;
-}
-
-.faq-soil-column {
+/* Wooden Sign Post "FAQ" */
+.faq-wooden-sign {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  margin-bottom: 34px;
 }
 
-.faq-wood-panel {
-  background: #fffbeb;
-  border: 2px solid #78350f;
-  border-radius: 12px;
-  box-shadow: 0 3px 0 #78350f;
-  overflow: hidden;
-  transition: all 0.2s ease;
+.wooden-board {
+  background: #fdf5da;
+  border: 4px solid #c99355;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(60, 20, 10, 0.22);
+  padding: 8px 48px;
+  position: relative;
+  z-index: 2;
 }
 
-.faq-wood-panel.active {
-  background: #fef3c7;
-  box-shadow: 0 4px 0 #ea580c;
-  border-color: #ea580c;
+.faq-text {
+  font-family: var(--font-bubbly);
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: #ea580c;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(180, 83, 9, 0.35);
+  display: block;
 }
 
-.faq-panel-btn {
+.wooden-peg {
+  width: 26px;
+  height: 42px;
+  background: #a1551e;
+  border-radius: 0 0 4px 4px;
+  margin-top: -3px;
+  box-shadow: 0 6px 10px rgba(60, 20, 10, 0.25);
+}
+
+/* Dual Soil Garden Beds (Left & Right) */
+.faq-plots-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 4vw, 48px);
   width: 100%;
-  padding: 12px 14px;
-  background: transparent;
-  border: none;
-  outline: none;
+}
+
+.carrot-garden-bed {
+  background: linear-gradient(180deg, #8a3727 0%, #632314 100%);
+  border: 4.5px solid #4a180d;
+  border-radius: 38px;
+  box-shadow: inset 0 8px 24px rgba(0, 0, 0, 0.45), 0 12px 30px rgba(50, 18, 10, 0.22);
+  padding: clamp(26px, 3.2vw, 38px) clamp(22px, 2.8vw, 34px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3vw, 34px);
+}
+
+/* Each FAQ Accordion Item */
+.faq-accordion-item {
+  position: relative;
+  width: 100%;
+}
+
+/* Plump Cartoon Carrots Poking Out from Soil Behind the Pill */
+.carrot-row-sprouts {
+  position: absolute;
+  top: -40px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bed-carrot-sprout {
+  width: clamp(54px, 6.2vw, 74px);
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(40, 15, 8, 0.45));
+}
+
+.bed-carrot-sprout.left {
+  transform: rotate(-6deg);
+}
+
+.bed-carrot-sprout.right {
+  transform: rotate(6deg);
+}
+
+/* Frosted White Pill Button */
+.faq-pill-btn {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.98);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 5px 14px rgba(40, 15, 8, 0.18), 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: #c2410c;
+  font-family: var(--font-bubbly);
+  font-size: clamp(0.92rem, 1.28vw, 1.15rem);
+  font-weight: 800;
+  padding: clamp(12px, 1.3vw, 16px) clamp(18px, 2vw, 28px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--font-bubbly);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--c-brown-dark);
-  text-align: left;
   cursor: pointer;
-  gap: 8px;
+  text-align: left;
+  transition: transform 0.2s var(--ease-bounce), box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.faq-arrow {
-  font-size: 0.75rem;
+.faq-pill-btn:hover,
+.faq-pill-btn:focus-visible {
+  transform: translateY(-2px) scale(1.015);
+  background: #ffffff;
   color: #ea580c;
-  transition: transform 0.25s ease;
+  box-shadow: 0 8px 22px rgba(40, 15, 8, 0.28), 0 0 12px rgba(251, 146, 60, 0.35);
+}
+
+.faq-chevron-arrow {
+  color: #ea580c;
+  transition: transform 0.25s var(--ease-bounce);
+  margin-left: 10px;
   flex-shrink: 0;
 }
 
-.faq-wood-panel.active .faq-arrow {
+.faq-accordion-item.active .faq-chevron-arrow {
   transform: rotate(180deg);
 }
 
-.faq-panel-drawer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, padding 0.3s ease;
-  padding: 0 14px;
-}
-
-.faq-wood-panel.active .faq-panel-drawer {
-  max-height: 180px;
-  padding: 0 14px 14px;
-}
-
-.faq-panel-drawer p {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
+/* Smooth Accordion Drawer Answer */
+.faq-drawer-panel {
+  display: none;
+  background: #fffdf2;
+  border: 3px solid #ea580c;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(40, 15, 8, 0.28);
+  padding: 16px 20px;
+  margin-top: 8px;
+  color: var(--c-brown-dark);
+  font-family: var(--font-body);
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
   font-weight: 600;
-  color: #78350f;
-  line-height: 1.45;
+  line-height: 1.55;
+  position: relative;
+  z-index: 5;
 }
 
+.faq-accordion-item.active .faq-drawer-panel {
+  display: block;
+  animation: faqDrawerPop 0.25s var(--ease-bounce) forwards;
+}
+
+.faq-drawer-panel p {
+  margin: 0;
+}
+
+@keyframes faqDrawerPop {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .carrot-patch-dual-beds {
+  .faq-plots-container {
     grid-template-columns: 1fr;
-    max-width: 480px;
-    margin: 0 auto;
+    gap: 24px;
+  }
+  .carrot-garden-bed {
+    border-radius: 28px;
+    padding: 20px 12px;
   }
 }

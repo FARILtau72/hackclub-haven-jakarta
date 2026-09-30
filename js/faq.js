@@ -3,27 +3,54 @@
 // ==========================================================================
 
 function initFaq() {
-  const faqPanels = document.querySelectorAll('.faq-wood-panel');
+  const items = document.querySelectorAll('.faq-accordion-item');
+  if (!items.length) return;
 
-  faqPanels.forEach((panel) => {
-    const btn = panel.querySelector('.faq-panel-btn');
+  items.forEach((item) => {
+    const btn = item.querySelector('.faq-pill-btn');
     if (!btn) return;
 
-    btn.addEventListener('click', () => {
-      const isAlreadyActive = panel.classList.contains('active');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = item.classList.contains('active');
 
-      faqPanels.forEach((other) => {
-        other.classList.remove('active');
-        const otherBtn = other.querySelector('.faq-panel-btn');
-        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      // Close other accordion drawers
+      items.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove('active');
+          const otherBtn = other.querySelector('.faq-pill-btn');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
       });
 
-      if (!isAlreadyActive) {
-        panel.classList.add('active');
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
         btn.setAttribute('aria-expanded', 'true');
       }
     });
   });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.faq-accordion-item')) {
+      items.forEach((item) => {
+        item.classList.remove('active');
+        const btn = item.querySelector('.faq-pill-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
+
+// Auto-run or export
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initFaq);
+} else {
+  initFaq();
 }
 
 window.initFaq = initFaq;
